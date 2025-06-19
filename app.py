@@ -1,3 +1,6 @@
+import os
+os.system("python -m spacy download en_core_web_sm")
+
 import streamlit as st
 import fitz  # PyMuPDF
 import docx2txt
