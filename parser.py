@@ -1,5 +1,7 @@
+import os
 import spacy
 
+os.system("python -m spacy download en_core_web_sm")
 nlp = spacy.load("en_core_web_sm")
 
 def extract_name(text):
@@ -16,3 +18,4 @@ def extract_skills(text):
 def extract_education(text):
     keywords = ['b.tech', 'm.tech', 'bachelor', 'master', 'phd', 'mba']
     return [kw for kw in keywords if kw in text.lower()]
+
